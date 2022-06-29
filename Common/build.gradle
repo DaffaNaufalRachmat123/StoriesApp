@@ -1,0 +1,19 @@
+apply plugin: 'com.android.library'
+apply from: '../android_core_dependencies.gradle'
+apply from: '../android_commons.gradle'
+
+kapt {
+    correctErrorTypes = true
+    useBuildCache = true
+    javacOptions {
+        option("-Xmaxerrs", 500)
+    }
+}
+
+dependencies {
+    implementation project(Modules.core)
+    implementation project(Modules.UiResources)
+    implementation Libraries.retrofit
+    implementation Libraries.lottie
+    implementation Libraries.retrofitGsonConverter
+}

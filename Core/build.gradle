@@ -1,0 +1,31 @@
+apply plugin: 'com.android.library'
+apply from: '../android_commons.gradle'
+apply plugin: 'kotlin-kapt'
+
+android {
+    defaultConfig {
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+}
+dependencies {
+    // KotPref
+    api Libraries.kotPrefCore
+    api Libraries.kotPrefInit
+    api Libraries.kotPrefGson
+    api Libraries.gson
+    // NETWORK
+    implementation Libraries.retrofit
+    implementation Libraries.retrofitGsonConverter
+    implementation Libraries.okhttp
+    implementation Libraries.httpLoggingInterceptor
+    debugImplementation Libraries.chuckerDebug
+    releaseImplementation Libraries.chuckerRelease
+    implementation Libraries.paging3
+    // Room
+    api AndroidLibraries.roomRunTime
+    api AndroidLibraries.roomKtx
+    kapt AndroidLibraries.roomCompiler
+    // KOIN
+    implementation Libraries.koin
+    implementation Libraries.koinViewModel
+}

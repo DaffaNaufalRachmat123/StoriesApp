@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StateViewLayout">
+        <attr name="emptyResource" format="reference" />
+        <attr name="retryResource" format="reference" />
+        <attr name="loadingResource" format="reference" />
+        <attr name="blankResource" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="StateView">
+        <attr name="sv_loading_view" format="reference" />
+        <attr name="sv_error_view" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="LoadingDots">
+        <attr name="LoadingDots_auto_play" format="boolean" />
+        <attr name="LoadingDots_dots_color" format="color" />
+        <attr name="LoadingDots_dots_count" format="integer" />
+        <attr name="LoadingDots_dots_size" format="dimension" />
+        <attr name="LoadingDots_dots_space" format="dimension" />
+        <attr name="LoadingDots_loop_duration" format="integer" />
+        <attr name="LoadingDots_loop_start_delay" format="integer" />
+        <attr name="LoadingDots_jump_duration" format="integer" />
+        <attr name="LoadingDots_jump_height" format="dimension" />
+    </declare-styleable>
+</resources>

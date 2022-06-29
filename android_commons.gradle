@@ -1,0 +1,91 @@
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+def buildEnvironmentPropertiesFile = rootProject.file("environment.properties")
+def buildEnvironmentProperties = new Properties()
+buildEnvironmentProperties.load(new FileInputStream(buildEnvironmentPropertiesFile))
+
+
+android {
+    compileSdkVersion Versions.compileSdk
+    defaultConfig {
+        minSdkVersion Versions.minSdk
+        targetSdkVersion Versions.targetSdk
+        versionCode Releases.versionCode
+        versionName Releases.versionName
+    }
+
+    flavorDimensions("environment")
+    productFlavors {
+        dev {
+            dimension "environment"
+            versionNameSuffix "-dev"
+            buildConfigField("String", "BASE_URL", buildEnvironmentProperties["PROD_ENDPOINT"])
+        }
+
+        staging {
+            dimension "environment"
+            versionNameSuffix "-staging"
+            buildConfigField("String", "BASE_URL", buildEnvironmentProperties["PROD_ENDPOINT"])
+        }
+
+        prod {
+            dimension "environment"
+            buildConfigField("String", "BASE_URL", buildEnvironmentProperties["PROD_ENDPOINT"])
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        suppressWarnings = true
+        freeCompilerArgs += [
+                '-Xopt-in=kotlinx.coroutines.ExperimentalCoroutinesApi',
+                '-Xopt-in=org.koin.core.component.KoinApiExtension',
+                '-Xinline-classes',
+                '-Xopt-in=kotlin.RequiresOptIn',
+                '-Xallow-result-return-type'
+        ]
+    }
+
+    dexOptions {
+        preDexLibraries = true
+        javaMaxHeapSize "4g"
+    }
+
+    lintOptions {
+        quiet true
+        abortOnError true
+        ignoreWarnings true
+    }
+
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation KotlinLibraries.kotlin
+    implementation Libraries.timberLog
+    implementation Libraries.BRVAH
+    api KotlinLibraries.kotlinCoroutinePlayService
+    api Libraries.googleClient
+    api Libraries.playServiceMaps
+    api Libraries.playServiceLocation
+    api(Libraries.glide)
+    api(Libraries.glideHttpIntegration)
+    api Libraries.glideTransformations
+    kapt Libraries.glideKapt
+}

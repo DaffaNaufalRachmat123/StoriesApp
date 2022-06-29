@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Login Area -->
+    <string name="login_title_text">Login</string>
+    <string name="login_email_hint_text">Email</string>
+    <string name="login_password_hint_text">Password min 6 chars</string>
+    <string name="login_btn_login">Login</string>
+    <string name="login_label_1">Dont have an account?</string>
+    <string name="login_label_register"><u>Register Here</u></string>
+    <string name="login_warning_chars">Password min 6 characters</string>
+    <string name="login_warning_credentials">Please fill email and password</string>
+    <string name="login_failed">Failed to login</string>
+    <string name="login_register_succeed">Register succeed, please login</string>
+
+    <!-- Register Area -->
+    <string name="register_title_text">Register</string>
+    <string name="register_name_hint_text">Name</string>
+    <string name="register_email_hint_text">Email</string>
+    <string name="register_password_hint_text">Password min 6 chars</string>
+    <string name="register_btn_register">Register</string>
+    <string name="register_label_1">Already have an account?</string>
+    <string name="register_label_login"><u>Login Here</u></string>
+    <string name="register_failed">Register failed</string>
+    <string name="register_warning_chars">Password min 6 chars</string>
+    <string name="register_warning_credentials">Please fill nama, email, password</string>
+
+    <!-- Home Area -->
+    <string name="home_list_story_title">List Story</string>
+    <string name="home_list_story_logout">Logout</string>
+    <string name="home_list_story_empty">Empty data</string>
+
+    <!-- Add Story Area -->
+    <string name="add_story_title">Create Story</string>
+    <string name="add_story_image_hint_text">Add Image</string>
+    <string name="add_story_description_hint_text">Story description</string>
+    <string name="add_story_latitude_text">Latitude</string>
+    <string name="add_story_longitude_text">Longitude</string>
+    <string name="add_story_region_text">Region</string>
+    <string name="add_story_address_text">Address</string>
+    <string name="add_story_btn_location_text">Add Location (optional)</string>
+    <string name="add_story_btn_create_story">Create Story</string>
+    <string name="add_story_failed">Failed to create story</string>
+    <string name="add_story_succeed">Create story succeed</string>
+    <string name="add_story_warning">Please fill image and description</string>
+
+    <!-- Activity Choose Location Area -->
+    <string name="choose_location_find_location">Getting your location</string>
+    <string name="choose_location_set_location">Set Location</string>
+
+    <!-- Bottom Sheet Language Area -->
+    <string name="choose_language_title_text">Choose Language</string>
+
+    <!-- Map Story Area -->
+    <string name="btn_prev_text">Previous</string>
+    <string name="page_number_text">Page </string>
+    <string name="btn_next_text">Next</string>
+    <!-- Detail Story -->
+    <string name="detail_cerita_title">Detail Story</string>
+    <!-- Choose Image -->
+    <string name="gallery_text">Galery</string>
+    <string name="camera_text">Camera</string>
+
+    <!-- Media not found -->
+    <string name="no_folder_found">No folders found</string>
+    <string name="unknown_folder">Unknown folder</string>
+    <string name="no_photos_found">No photos found</string>
+</resources>

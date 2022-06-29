@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Login Area -->
+    <string name="login_title_text">Masuk</string>
+    <string name="login_email_hint_text">Alamat Surel</string>
+    <string name="login_password_hint_text">Kata Sandi min 6 huruf</string>
+    <string name="login_btn_login">Masuk</string>
+    <string name="login_label_1">Belum punya akun?</string>
+    <string name="login_label_register"><u>Daftar Disini</u></string>
+    <string name="login_warning_chars">Kata sandi minal 6 karakter</string>
+    <string name="login_warning_credentials">Harap isi email dan password</string>
+    <string name="login_failed">Gagal masuk</string>
+    <string name="login_register_succeed">Pendaftaran berhasil, silahkan masuk</string>
+    <string name="login_transition_name" translatable="false">LoginTransition</string>
+    <string name="login_transition_to_main_name" translatable="false">Login Transition To Main Activity</string>
+
+    <!-- Register Area -->
+    <string name="register_title_text">Daftar</string>
+    <string name="register_name_hint_text">Nama</string>
+    <string name="register_email_hint_text">Alamat Surel</string>
+    <string name="register_password_hint_text">Kata Sandi 6 huruf</string>
+    <string name="register_btn_register">Daftar</string>
+    <string name="register_label_1">Sudah punya akun?</string>
+    <string name="register_label_login"><u>Masuk Disini</u></string>
+    <string name="register_failed">Gagal Daftar</string>
+    <string name="register_warning_chars">Kata sandi minimal 6 karakter</string>
+    <string name="register_warning_credentials">Harap isi nama, email, password</string>
+
+    <!-- Home Area -->
+    <string name="home_list_story_title">Daftar Cerita</string>
+    <string name="home_list_story_logout">Keluar</string>
+    <string name="home_list_story_empty">Tidak ada data</string>
+    <string name="home_to_detail_transition_name" translatable="false">Home To Detail</string>
+    <string name="home_to_add_story_transition_name" translatable="false">Home To Add Story</string>
+    <string name="home_to_map_transition_name" translatable="false">Home To Maps</string>
+
+    <!-- Add Story Area -->
+    <string name="add_story_title">Buat Cerita</string>
+    <string name="add_story_image_hint_text">Tambah Gambar</string>
+    <string name="add_story_description_hint_text">Deskripsi cerita</string>
+    <string name="add_story_latitude_text">Latitude</string>
+    <string name="add_story_longitude_text">Longitude</string>
+    <string name="add_story_region_text">Wilayah</string>
+    <string name="add_story_address_text">Alamat</string>
+    <string name="add_story_btn_location_text">Tambah Lokasi (opsional)</string>
+    <string name="add_story_btn_create_story">Tambah Cerita</string>
+    <string name="add_story_failed">Gagal membuat cerita</string>
+    <string name="add_story_succeed">Berhasil membuat cerita</string>
+    <string name="add_story_warning">Harap isi gambar dan deskripsi</string>
+    <string name="add_story_to_choose_file_transition_name" translatable="false">Add Story To Choose File</string>
+    <string name="add_story_to_choose_location_transition_name" translatable="false">Add Story To Choose Location</string>
+
+    <!-- Activity Choose Location Area -->
+    <string name="choose_location_find_location">Mendapatkan lokasi mu</string>
+    <string name="choose_location_set_location">Atur Lokasi</string>
+
+    <!-- Bottom Sheet Language Area -->
+    <string name="choose_language_title_text">Pilih Bahasa</string>
+
+    <!-- Map Story Area -->
+    <string name="btn_prev_text">Sebelumnya</string>
+    <string name="page_number_text">Halaman ke </string>
+    <string name="btn_next_text">Selanjutnya</string>
+    <!-- Detail Story -->
+    <string name="detail_cerita_title">Rincian Cerita</string>
+    <!-- Choose Image -->
+    <string name="gallery_text">Galeri</string>
+    <string name="camera_text">Kamera</string>
+    <string name="folder_to_media_transition_name" translatable="false">Folder To Media</string>
+
+    <!-- Media not found -->
+    <string name="no_folder_found">Tidak ada folder</string>
+    <string name="unknown_folder">Folder tak diketahui</string>
+    <string name="no_photos_found">Tidak ada foto</string>
+</resources>

@@ -1,0 +1,50 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath Plugins.androidGradle
+        classpath Plugins.kotlinGradle
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.20"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.google.com" }
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        mavenCentral()
+    }
+
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
+
+    configurations.all {
+        //exclude rxjava2
+        all*.exclude group: 'io.reactivex.rxjava2', module: 'rxjava'
+        resolutionStrategy {
+            eachDependency { DependencyResolveDetails details ->
+                if (details.requested.name == 'kotlin-stdlib-jdk8'
+                        || details.requested.name == 'kotlin-stdlib-jdk7'
+                        || details.requested.name == 'kotlin-reflect'
+                        || details.requested.name == 'kotlin-stdlib-common') {
+                    details.useVersion "1.5.20"
+                }
+            }
+        }
+    }
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

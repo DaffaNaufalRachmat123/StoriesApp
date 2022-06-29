@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.LottieDialog.DayNight" parent="@style/Theme.MaterialComponents.DayNight.Dialog.Alert">
+        <item name="android:background">?android:colorBackground</item>
+    </style>
+
+    <style name="Theme.LottieDialog.Light" parent="@style/Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="android:background">?android:colorBackground</item>
+    </style>
+
+    <style name="Theme.LottieDialog.Dark" parent="@style/Theme.MaterialComponents.Dialog.Alert">
+        <item name="android:background">?android:colorBackground</item>
+    </style>
+
+    <style name="Theme.LottieDialog.BottomSheet.DayNight" parent="@style/Theme.MaterialComponents.DayNight.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="bottomSheetStyle">@style/Widget.LottieDialog.BottomSheet</item>
+    </style>
+
+    <style name="Theme.LottieDialog.BottomSheet.Light" parent="@style/Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="bottomSheetStyle">@style/Widget.LottieDialog.BottomSheet</item>
+    </style>
+
+    <style name="Theme.LottieDialog.BottomSheet.Dark" parent="@style/Theme.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="bottomSheetStyle">@style/Widget.LottieDialog.BottomSheet</item>
+    </style>
+
+    <!--    endregion-->
+    <!--    ShapeAppearance-->
+
+    <style name="ShapeAppearance.LottieDialog.BottomSheet" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/lottie_dialog_corner_radius_bottom_sheet</item>
+        <item name="cornerSizeTopRight">@dimen/lottie_dialog_corner_radius_bottom_sheet</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <!--    endregion-->
+    <!--    region Text Appearance-->
+
+    <style name="TextAppearance.LottieDialog.Title" parent="TextAppearance.MaterialComponents.Headline6" />
+
+    <style name="TextAppearance.LottieDialog.Content" parent="TextAppearance.MaterialComponents.Body2" />
+
+    <!--    endregion-->
+    <!--    Widget-->
+
+    <style name="Widget.LottieDialog.BottomSheet" parent="@style/Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.LottieDialog.BottomSheet</item>
+    </style>
+
+    <style name="Widget.LottieDialog.AnimationView" parent="">
+        <item name="android:scaleType">centerInside</item>
+        <item name="lottie_autoPlay">true</item>
+        <item name="lottie_loop">true</item>
+    </style>
+
+    <style name="Widget.LottieDialog.ProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:indeterminate">false</item>
+        <item name="android:progressTint">?attr/colorPrimary</item>
+    </style>
+
+    <style name="Widget.LottieDialog.CloseButton" parent="">
+        <item name="android:background">@null</item>
+        <item name="android:src">@drawable/lottie_dialog_round_close</item>
+    </style>
+
+    <style name="Widget.LottieDialog.Input.ImageButton" parent="">
+        <item name="android:background">@null</item>
+        <item name="android:tint">?attr/colorPrimary</item>
+    </style>
+    <style name="LottieDialogTheme.Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!--    endregion-->
+
+</resources>

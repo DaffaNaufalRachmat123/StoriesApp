@@ -1,0 +1,31 @@
+/**
+ * Feature dependencies
+ */
+apply plugin: 'com.android.library'
+apply from: '../../android_core_dependencies.gradle'
+apply from: '../../android_commons.gradle'
+
+kapt {
+    correctErrorTypes = true
+    useBuildCache = true
+    javacOptions {
+        option("-Xmaxerrs", 500)
+    }
+}
+
+dependencies {
+    implementation project(Modules.core)
+    implementation project(Modules.common)
+    implementation project(Modules.Navigation)
+    implementation project(Modules.UiResources)
+    implementation Libraries.facebookShimmer
+    implementation Libraries.BRVAH
+    implementation Libraries.paging3
+    implementation Libraries.mdCore
+    implementation Libraries.mdDateTime
+    implementation Libraries.mdBottomSheet
+    implementation Libraries.mdLifecycle
+    implementation AndroidLibraries.swipeRefreshLayout
+    implementation Libraries.sdp
+    implementation Libraries.lottie
+}

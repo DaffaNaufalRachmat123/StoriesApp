@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Bottom Sheet Language Area -->
+    <string name="choose_language_title_text">Pilih Bahasa</string>
+</resources>

@@ -1,0 +1,9 @@
+rootProject.name = "StoriesApp"
+include ':app'
+include ':Core'
+include ':Common'
+include ':features'
+include ':UiResources'
+include ':features:main'
+include ':features:auth'
+include ':Navigation'

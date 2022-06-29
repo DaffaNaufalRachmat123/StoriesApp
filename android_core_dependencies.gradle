@@ -1,0 +1,35 @@
+/**
+ * Shared dependencies between modules
+ */
+dependencies {
+    // KOTLIN
+    implementation KotlinLibraries.kotlin
+    implementation KotlinLibraries.kotlinCoroutineCore
+    implementation KotlinLibraries.kotlinCoroutineAndroid
+
+    // Rx
+    implementation Libraries.rxKotlin
+    implementation Libraries.rxJava
+    implementation(Libraries.rxAndroid) {
+        exclude group: 'io.reactivex.rxjava2', module: 'rxjava'
+    }
+
+    implementation Libraries.koin
+    implementation Libraries.koinViewModel
+    implementation Libraries.koinScope
+    implementation Libraries.koinExt
+    implementation Libraries.playServiceMaps
+
+    // ANDROID
+    implementation AndroidLibraries.appCompat
+    implementation AndroidLibraries.activityKtx
+    implementation AndroidLibraries.material
+    implementation AndroidLibraries.recyclerView
+    implementation AndroidLibraries.coreKtx
+    implementation AndroidLibraries.lifecycleCommon
+    implementation AndroidLibraries.lifecycleLiveData
+    implementation AndroidLibraries.lifecycleViewModel
+    implementation AndroidLibraries.lifecycleRuntimeKtx
+    implementation Libraries.gson
+    implementation 'com.google.guava:guava:27.0.1-android'
+}

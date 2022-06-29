@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="LoadingDots_dots_size_default">12dp</dimen>
+    <dimen name="LoadingDots_dots_space_default">2dp</dimen>
+    <dimen name="LoadingDots_jump_height_default">12dp</dimen>
+    <dimen name="elevations">8dp</dimen>
+    <dimen name="medium">16dp</dimen>
+    <dimen name="lottie_dialog_corner_radius_bottom_sheet">@dimen/medium</dimen>
+    <dimen name="lottie_dialog_corner_radius_dialog">@dimen/medium</dimen>
+    <dimen name="lottie_dialog_animation_height_loading">96dp</dimen>
+    <dimen name="large">32dp</dimen>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.storiesapp.features.main">
+    <application>
+        <activity android:name=".MainActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ActivityFolder" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ActivityMedia" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ActivityAddStory" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ActivityChooseLocation" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ActivityMapStory" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ActivityDetailStory" android:theme="@style/AppTheme.NoActionBar"/>
+    </application>
+</manifest>
